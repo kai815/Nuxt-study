@@ -3,7 +3,7 @@
     <div>
       <app-logo/>
       <h1 class="title">
-        Hello Nuxt
+        my-nuxt-app
       </h1>
       <h2 class="subtitle">
         Nuxt.js project
@@ -26,8 +26,11 @@
 import AppLogo from '~/components/AppLogo.vue'
 
 export default {
-  components: {
-    AppLogo
+  async mounted() {
+    console.log(
+      JSON.stringify(await
+      this.$axios.$get('https://qiita.com/api/v2/items?query=tag:nuxt.js'),true, ' ')
+    )
   }
 }
 </script>
