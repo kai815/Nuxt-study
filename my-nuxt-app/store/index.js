@@ -16,10 +16,10 @@ export default () =>(new Vuex.Store({
              state.items = items
          },
          setUser (state, { user }){
-             state.user[user.id] = user
+             state.users[user.id] = user
          },
          setUserItems(state, { user, items }){
-             state,userItems[user.id] = items
+             state.userItems[user.id] = items
          }
      },
      actions:{
