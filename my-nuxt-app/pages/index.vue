@@ -3,6 +3,14 @@
     <div>
       <h3>Nuxt.jsのタグがつけられた投稿の一覧</h3>
       <ul>
+        <li>
+          <nuxt-link to="/login">ログインページへ</nuxt-link>
+        </li>
+          <nuxt-link to="/authed-route">認証が必要なページへ</nuxt-link>
+        <li>
+        </li>
+      </ul>
+      <ul>
         <li v-for='item in items' :key="item.id">
           <h4>
             <span>{{item.title}}</span>
